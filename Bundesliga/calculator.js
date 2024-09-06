@@ -112,22 +112,6 @@ function updateResultsTable(results) {
     });
 }
 
-
-// calculator.js
-
-function toggleMatches() {
-    const matchList = document.getElementById('matchList');
-    const toggleMatchesBtn = document.getElementById('toggleMatchesBtn');
-
-    if (matchList.classList.contains('hidden')) {
-        matchList.classList.remove('hidden');
-        toggleMatchesBtn.textContent = 'Ocultar Jogos';
-    } else {
-        matchList.classList.add('hidden');
-        toggleMatchesBtn.textContent = 'Mostrar Jogos';
-    }
-}
-
     document.getElementById('showInstructionsBtn').addEventListener('click', function() {
         var instructionsDiv = document.getElementById('instructions');
         if (instructionsDiv.classList.contains('hidden')) {
@@ -142,3 +126,44 @@ function toggleMatches() {
             instructionsDiv.classList.add('hidden');
         }
     });
+
+
+
+    function toggleMatches() {
+        const matches = document.getElementById('matchList');
+        const standings = document.getElementById('standings');
+        const button = document.getElementById('toggleMatchesBtn');
+        
+        if (matches.classList.contains('hidden')) {
+            matches.classList.remove('hidden');
+            standings.classList.add('hidden');
+            button.textContent = 'Ocultar Jogos';
+        } else {
+            matches.classList.add('hidden');
+            standings.classList.remove('hidden');
+            button.textContent = 'Mostrar Jogos';
+            updateStandings();
+        }
+    }
+
+    function updateStandings() {
+        const rows = document.querySelectorAll('#resultsTable tbody tr');
+        const teams = Array.from(rows).map(row => {
+            return {
+                name: row.cells[1].textContent,
+                points: parseInt(row.cells[6].textContent)
+            };
+        });
+        
+        // Ordena os times por pontos, do maior para o menor
+        teams.sort((a, b) => b.points - a.points);
+
+        // Atualiza o campeão e vice-campeão
+        const champion = teams[0] || { name: 'N/A', points: 0 };
+        const runnerUp = teams[1] || { name: 'N/A', points: 0 };
+
+        document.getElementById('championName').textContent = champion.name;
+        document.getElementById('championPointsValue').textContent = champion.points;
+        document.getElementById('runnerUpName').textContent = runnerUp.name;
+        document.getElementById('runnerUpPointsValue').textContent = runnerUp.points;
+    }
