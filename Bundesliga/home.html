@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Campeonato</title>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Tutorial.html">
 
@@ -217,7 +220,13 @@
 
         </div>
     </div>
-      <button onclick="generateMatches()">Gerar Partidas</button>
+
+  <!-- Centralize o botão "Gerar Partidas" com uma div wrapper -->
+    <div class="button-container">
+        <button id="generateMatchesBtn" class="btn-primary" onclick="generateMatches()">Gerar Partidas</button>
+    </div>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="calculator.js"></script>
 </body>
 </html>

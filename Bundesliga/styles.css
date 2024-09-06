@@ -1,22 +1,29 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #d0cece;
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
 }
 
 .teams {
@@ -25,84 +32,95 @@ h1 {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .matches, .results {
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 15px;
+    background-color: #fafafa;
     border-radius: 8px;
-    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
 }
 
 .matches {
-    flex: 1;
-    max-width: 45%; /* Ajuste a largura máxima conforme necessário */
+    max-width: 45%;
 }
 
 .results {
-    flex: 1;
-    max-width: 50%; /* Ajuste a largura máxima conforme necessário */
+    max-width: 50%;
 }
 
 .results-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
 .results table {
-    width: 70%;
+    width: 100%;
     border-collapse: collapse;
-    font-size: 0.9em; /* Ajusta o tamanho da fonte da tabela */
+    font-size: 0.9em;
+    margin-top: 10px;
 }
 
 .results table th, .results table td {
     border: 1px solid #ddd;
-    padding: 6px; /* Ajusta o padding das células da tabela */
+    padding: 8px;
     text-align: center;
 }
 
 .results table th {
     background-color: #f2f2f2;
+    font-weight: bold;
 }
 
 .logos {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .logos img {
-    max-width: 100px; /* Ajuste o tamanho dos logotipos conforme necessário */
+    max-width: 120px;
     height: auto;
 }
 
-/* Adiciona estilização para os botões */
 .controls {
     display: flex;
-    gap: 10px; /* Espaçamento entre os botões */
-    margin-bottom: 20px; /* Espaçamento abaixo dos botões */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 button {
-    display: block;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 12px 20px;
     border: none;
-    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
     font-size: 16px;
-    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
 #toggleMatchesBtn {
-    background-color: #28a745; /* Cor verde para o botão de alternar */
+    background-color: #28a745;
+    background: linear-gradient(135deg, #28a745, #218838);
 }
 
 #toggleMatchesBtn:hover {
@@ -111,4 +129,10 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+/* Novo estilo para centralizar o botão */
+.button-container {
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    margin: 20px 0; /* Margem superior e inferior */
 }
