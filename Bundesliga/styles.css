@@ -1,0 +1,108 @@
+/* Reset básico para garantir uma aparência consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container principal para layout flexível */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Estilo para a seção da tabela (lado esquerdo) */
+.sidebar {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+/* Estilo da tabela */
+.sidebar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar th, .sidebar td {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.sidebar tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.sidebar tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para a seção de placar (lado direito) */
+.main-content {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Estilo dos títulos */
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Estilo das partidas */
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.team-name {
+    font-weight: bold;
+}
+
+.score {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo para o placar ao vivo */
+.team-score {
+    font-size: 24px;
+    font-weight: bold;
+}
