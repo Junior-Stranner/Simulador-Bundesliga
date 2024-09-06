@@ -1,108 +1,104 @@
-/* Reset básico para garantir uma aparência consistente */
-* {
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Cor de fundo suave para a página */
     margin: 0;
     padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff; /* Cor de fundo branca para o contêiner */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Cor de texto escura para o título */
+    margin-bottom: 20px;
+}
+
+.teams {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.matches, .results {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #f9f9f9; /* Fundo suave para as seções */
     box-sizing: border-box;
 }
 
-/* Estilos para o corpo */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+.matches {
+    flex: 1;
+    max-width: 45%;
+    background-color: #f7f9fc; /* Fundo leve e moderno */
 }
 
-/* Container principal para layout flexível */
-.container {
-    display: flex;
-    margin: 20px;
+.results {
+    flex: 1;
+    max-width: 50%;
+    background-color: #ffffff; /* Fundo branco para a tabela */
 }
 
-/* Estilo para a seção da tabela (lado esquerdo) */
-.sidebar {
-    width: 30%;
-    background-color: #fff;
+.matches ul {
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-right: 20px;
+    background-color: #ffffff; /* Fundo branco para a lista de jogos */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Estilo da tabela */
-.sidebar table {
+.results table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.9em;
 }
 
-.sidebar th, .sidebar td {
-    padding: 10px;
-    text-align: left;
+.results table th, .results table td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Aumenta o padding das células da tabela */
+    text-align: center;
 }
 
-.sidebar th {
-    background-color: #007bff;
+.results table th {
+    background-color: #007bff; /* Cor de fundo azul para cabeçalhos */
+    color: #fff; /* Texto branco para cabeçalhos */
+}
+
+.results table td {
+    background-color: #f4f4f4; /* Fundo leve para as células */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Cor de fundo azul para o botão */
     color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Aumenta o tamanho da fonte do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    margin-top: 20px;
 }
 
-.sidebar tr:nth-child(even) {
-    background-color: #f9f9f9;
+button:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
+    transform: scale(1.02); /* Efeito de aumento suave */
 }
 
-.sidebar tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Estilo para a seção de placar (lado direito) */
-.main-content {
-    width: 70%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-/* Estilo dos títulos */
-h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-/* Estilo das partidas */
-.match {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.team {
-    display: flex;
-    align-items: center;
-}
-
-.team-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.team-name {
-    font-weight: bold;
-}
-
-.score {
-    font-size: 24px;
-    color: #333;
-}
-
-/* Estilo para o placar ao vivo */
-.team-score {
-    font-size: 24px;
-    font-weight: bold;
+button:active {
+    transform: scale(0.98); /* Efeito de redução ao clicar */
 }
