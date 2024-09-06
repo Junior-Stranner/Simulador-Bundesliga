@@ -111,3 +111,34 @@ function updateResultsTable(results) {
         resultsTableBody.appendChild(row);
     });
 }
+
+
+// calculator.js
+
+function toggleMatches() {
+    const matchList = document.getElementById('matchList');
+    const toggleMatchesBtn = document.getElementById('toggleMatchesBtn');
+
+    if (matchList.classList.contains('hidden')) {
+        matchList.classList.remove('hidden');
+        toggleMatchesBtn.textContent = 'Ocultar Jogos';
+    } else {
+        matchList.classList.add('hidden');
+        toggleMatchesBtn.textContent = 'Mostrar Jogos';
+    }
+}
+
+    document.getElementById('showInstructionsBtn').addEventListener('click', function() {
+        var instructionsDiv = document.getElementById('instructions');
+        if (instructionsDiv.classList.contains('hidden')) {
+            fetch('Tutorial.html')
+                .then(response => response.text())
+                .then(data => {
+                    instructionsDiv.innerHTML = data;
+                    instructionsDiv.classList.remove('hidden');
+                })
+                .catch(error => console.error('Erro ao carregar o tutorial:', error));
+        } else {
+            instructionsDiv.classList.add('hidden');
+        }
+    });

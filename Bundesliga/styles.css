@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0; /* Cor de fundo suave para a página */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
@@ -11,15 +11,12 @@ body {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background: #ffffff; /* Cor de fundo branca para o contêiner */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333; /* Cor de texto escura para o título */
-    margin-bottom: 20px;
 }
 
 .teams {
@@ -33,72 +30,85 @@ h1 {
 }
 
 .matches, .results {
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: #f9f9f9; /* Fundo suave para as seções */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
     box-sizing: border-box;
 }
 
 .matches {
     flex: 1;
-    max-width: 45%;
-    background-color: #f7f9fc; /* Fundo leve e moderno */
+    max-width: 45%; /* Ajuste a largura máxima conforme necessário */
 }
 
 .results {
     flex: 1;
-    max-width: 50%;
-    background-color: #ffffff; /* Fundo branco para a tabela */
+    max-width: 50%; /* Ajuste a largura máxima conforme necessário */
 }
 
-.matches ul {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #ffffff; /* Fundo branco para a lista de jogos */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.results-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .results table {
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
-    font-size: 0.9em;
+    font-size: 0.9em; /* Ajusta o tamanho da fonte da tabela */
 }
 
 .results table th, .results table td {
     border: 1px solid #ddd;
-    padding: 8px; /* Aumenta o padding das células da tabela */
+    padding: 6px; /* Ajusta o padding das células da tabela */
     text-align: center;
 }
 
 .results table th {
-    background-color: #007bff; /* Cor de fundo azul para cabeçalhos */
-    color: #fff; /* Texto branco para cabeçalhos */
+    background-color: #f2f2f2;
 }
 
-.results table td {
-    background-color: #f4f4f4; /* Fundo leve para as células */
+.logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logos img {
+    max-width: 100px; /* Ajuste o tamanho dos logotipos conforme necessário */
+    height: auto;
+}
+
+/* Adiciona estilização para os botões */
+.controls {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 20px; /* Espaçamento abaixo dos botões */
 }
 
 button {
     display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff; /* Cor de fundo azul para o botão */
+    padding: 10px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 18px; /* Aumenta o tamanho da fonte do botão */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    font-size: 16px;
     margin-top: 20px;
 }
 
 button:hover {
-    background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
-    transform: scale(1.02); /* Efeito de aumento suave */
+    background-color: #0056b3;
 }
 
-button:active {
-    transform: scale(0.98); /* Efeito de redução ao clicar */
+#toggleMatchesBtn {
+    background-color: #28a745; /* Cor verde para o botão de alternar */
+}
+
+#toggleMatchesBtn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
 }
