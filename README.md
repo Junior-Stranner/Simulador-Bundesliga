@@ -11,9 +11,7 @@
 
 ![alt text](<Bundesliga/img/Captura de tela 2024-09-06 180836 copy.png>)
 
-![alt text](<Bundesliga/img/Captura de tela 2024-09-06 180805.png>)
 
 <h3>Um mini Passo a passo de Como Jogar e se divertir com Simulador</h3>
 
-![alt text](<Bundesliga/img/Captura de tela 2024-09-06 184118.png>)
 ![alt text](<Bundesliga/img/Captura de tela 2024-09-06 184118.png>)
