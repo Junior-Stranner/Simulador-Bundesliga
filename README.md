@@ -19,4 +19,5 @@
 
 <h3> And the last I´ll add this liitle detail  when generating the match and hiding the games you will see the champion and runner-up with their opinions
 </h3>
+
 ![image](https://github.com/user-attachments/assets/1d544d83-5d75-4c25-9374-809c17c42b7b)
